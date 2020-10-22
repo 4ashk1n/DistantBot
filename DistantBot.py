@@ -155,7 +155,7 @@ uroki=["05:55:00","06:55:00","07:55:00","08:55:00","09:55:00","10:55:00","11:55:
 while True:
     weekdaynow = int(datetime.weekday(datetime.today()))
     timenow = str(datetime.time(datetime.today()))[0:-7]
-    print(timenow,weekdaynow)
+    #print(timenow,weekdaynow)
     if timenow in uroki:
         sleep(1)
         if uroki.index(timenow)>=len(nedel[weekdaynow]):
@@ -231,7 +231,10 @@ while True:
             objc+=1
             obj+=1
             urokid=obj
-        message=str("Через 5 минут начнется урок "+str(urokname)+"\nСсылка: https://dnevnik.mos.ru/conference/?scheduled_lesson_id="+str(urokid))
+        qall=''
+        if urok not in ['alg','geom','inf','fra','eng']:
+            qall='@all'
+        message=str("Через 5 минут начнется урок "+str(urokname)+"\nСсылка: https://dnevnik.mos.ru/conference/?scheduled_lesson_id="+str(urokid)+'\n'+qall)
         for k in id:
             vk.messages.send(
                 key=('140a8fd760ef998de095bf1b9c92b822201366a2'),
