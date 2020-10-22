@@ -145,7 +145,7 @@ ct=['geom','geom','him','bio','fiz','eng','inf']
 pt=['fiz','alg','lit','alg','rus','eng','fra']
 nedel=[pn,vt,sr,ct,pt,[],[]]
 
-uroki=["8:55:00","9:55:00","10:55:00","11:55:00","12:55:00","13:55:00","14:55:00"]
+uroki=["5:55:00","6:55:00","7:55:00","8:55:00","9:55:00","10:55:00","11:55:00"]
 
 
 # print(str(timenow)[0:-7])
@@ -155,7 +155,7 @@ uroki=["8:55:00","9:55:00","10:55:00","11:55:00","12:55:00","13:55:00","14:55:00
 while True:
     weekdaynow = int(datetime.weekday(datetime.today()))
     timenow = str(datetime.time(datetime.today()))[0:-7]
-
+    print(timenow,weekdaynow)
     if timenow in uroki:
         sleep(1)
         if uroki.index(timenow)>=len(nedel[weekdaynow]):
