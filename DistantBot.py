@@ -30,7 +30,7 @@ for event in longpoll.listen():
                 break
 
 # dnevnik.mos.ru/conference/?scheduled_lesson_id=
-#
+# пппп
 # 33 часа
 
 
